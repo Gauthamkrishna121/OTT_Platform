@@ -1,0 +1,413 @@
+.profile-page {
+    display: flex;
+    min-height: 100vh;
+    background-color: var(--bg-color);
+}
+
+.profile-content {
+    flex: 1;
+    margin-left: var(--sidebar-width);
+    padding: 0;
+}
+
+.profile-header {
+    position: relative;
+    margin-bottom: 3rem;
+}
+
+.profile-banner {
+    height: 200px;
+    background: linear-gradient(135deg, var(--accent-color) 0%, #001219 100%);
+    opacity: 0.2;
+}
+
+.profile-meta {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    align-items: flex-end;
+    gap: 2rem;
+    margin-top: -60px;
+    position: relative;
+    z-index: 10;
+}
+
+.profile-avatar {
+    width: 140px;
+    height: 140px;
+    border-radius: 32px;
+    border: 4px solid var(--bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-color);
+    overflow: hidden;
+}
+
+.profile-info-main {
+    flex: 1;
+    padding-bottom: 0.5rem;
+}
+
+.profile-info-main h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 0.25rem;
+}
+
+.edit-name-input {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--accent-color);
+    border-radius: 8px;
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 800;
+    padding: 0 1rem;
+    width: 100%;
+    outline: none;
+}
+
+.edit-actions {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.password-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    background: rgba(255, 255, 255, 0.02);
+    padding: 1.5rem;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.password-form input {
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 0.85rem 1rem;
+    border-radius: 10px;
+    color: white;
+    font-size: 0.95rem;
+    transition: all 0.3s;
+}
+
+.password-form input:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.form-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.btn-primary {
+    background: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 10px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-primary:hover {
+    background: var(--accent-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 168, 232, 0.4);
+}
+
+.btn-text {
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    font-weight: 600;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.btn-text:hover {
+    color: white;
+}
+
+.profile-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 2rem;
+}
+
+.profile-card {
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(16px);
+    border-radius: 24px;
+    padding: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    margin-bottom: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.profile-card:hover {
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+    color: var(--accent-color);
+}
+
+.card-header h2 {
+    font-size: 1.1rem;
+    color: white;
+    font-weight: 700;
+}
+
+.info-rows {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.info-row .label {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.25rem;
+}
+
+.info-row p {
+    font-weight: 600;
+}
+
+.status-badge {
+    display: inline-block;
+    background: rgba(0, 168, 232, 0.1);
+    color: var(--accent-color);
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+}
+
+.password-display {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.02);
+    padding: 1.25rem;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.password-display p {
+    font-size: 1.5rem;
+    letter-spacing: 0.6rem;
+    color: var(--accent-color);
+    font-family: monospace;
+    margin: 0;
+    line-height: 1;
+    opacity: 0.8;
+}
+
+.btn-outline {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+    padding: 0.6rem 1.25rem;
+    border-radius: 10px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+}
+
+.btn-outline:hover {
+    background: var(--accent-color);
+    border-color: var(--accent-color);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 168, 232, 0.3);
+}
+
+.history-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.history-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 16px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid rgba(255, 255, 255, 0.01);
+}
+
+.history-item:hover {
+    background: rgba(255, 255, 255, 0.05);
+    transform: translateY(-3px) scale(1.01);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    border-color: rgba(255, 255, 255, 0.08);
+}
+
+.history-info {
+    flex: 1;
+}
+
+.history-info h3 {
+    font-size: 1rem;
+    margin-bottom: 0.2rem;
+}
+
+.history-info span {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+.history-progress {
+    text-align: right;
+    width: 80px;
+}
+
+.progress-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+}
+
+.progress-bar {
+    height: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+}
+
+.progress-fill {
+    height: 100%;
+    background: var(--accent-color);
+    border-radius: 2px;
+}
+
+.btn-mini-play {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+}
+
+.history-item:hover .btn-mini-play {
+    background: var(--accent-color);
+    transform: scale(1.1);
+    box-shadow: 0 0 15px var(--accent-color);
+}
+
+.btn-view-all {
+    width: 100%;
+    margin-top: 1.5rem;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+    padding: 0.75rem;
+    border-radius: 12px;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.btn-view-all:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.profile-footer {
+    max-width: 1100px;
+    margin: 2rem auto 4rem;
+    padding: 0 2rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.btn-logout-alt {
+    background: rgba(239, 68, 68, 0.1);
+    color: #ef4444;
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    cursor: pointer;
+}
+
+.btn-switch-profile {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: rgba(255, 255, 255, 0.05);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-switch-profile:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: #fff;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 900px) {
+    .profile-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.loading-text {
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    padding: 2rem 0;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 0.5; }
+    50% { opacity: 1; }
+    100% { opacity: 0.5; }
+}
+
+.empty-history {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 0;
+    color: var(--text-secondary);
+    gap: 1rem;
+    background: rgba(255, 255, 255, 0.01);
+    border-radius: 16px;
+    border: 1px dashed rgba(255, 255, 255, 0.1);
+}
+
+.empty-history p {
+    font-size: 0.95rem;
+    font-weight: 500;
+}

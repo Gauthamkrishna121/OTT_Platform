@@ -1,0 +1,108 @@
+/* ─── Profiles Page ─────────────────────── */
+.ps-page {
+    background: #000;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ps-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+}
+
+/* Title */
+.ps-title {
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-weight: 400;
+    color: #fff;
+    margin-bottom: 2.5rem;
+    letter-spacing: -0.5px;
+}
+
+/* Grid of profiles */
+.ps-grid {
+    display: flex;
+    flex-direction: row;
+    gap: 2vw;
+    justify-content: center;
+    margin-bottom: 4rem;
+}
+
+/* Individual profile item */
+.ps-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+    width: clamp(100px, 12vw, 160px);
+}
+
+/* Colored square avatar */
+.ps-avatar {
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+    border: 3px solid transparent;
+    transition: border-color 0.2s ease;
+}
+
+.ps-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: bottom;
+}
+
+.ps-item:hover .ps-avatar {
+    border-color: #fff;
+}
+
+/* Name text */
+.ps-name {
+    font-size: 1.05rem;
+    color: #808080;
+    transition: color 0.2s ease;
+    letter-spacing: 0.02em;
+}
+
+.ps-item:hover .ps-name {
+    color: #fff;
+}
+
+/* Manage Profiles button */
+.ps-manage-btn {
+    background: transparent;
+    border: 1px solid #555;
+    color: #808080;
+    padding: 0.65rem 2.5rem;
+    font-size: 1rem;
+    letter-spacing: 0.12em;
+    font-family: inherit;
+    cursor: pointer;
+    transition: border-color 0.2s, color 0.2s;
+    border-radius: 2px;
+}
+
+.ps-manage-btn:hover {
+    border-color: #fff;
+    color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .ps-grid {
+        flex-wrap: wrap;
+        gap: 1.5rem;
+    }
+
+    .ps-item {
+        width: clamp(80px, 35vw, 130px);
+    }
+}

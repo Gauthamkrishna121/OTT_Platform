@@ -1,0 +1,108 @@
+.hero {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    padding: 0 5%;
+    overflow: hidden;
+    background-color: #000;
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.6;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg,
+            #0b0b0b 0%,
+            rgba(11, 11, 11, 0.8) 20%,
+            rgba(11, 11, 11, 0) 50%),
+        linear-gradient(0deg,
+            #0b0b0b 0%,
+            rgba(11, 11, 11, 0) 30%);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
+}
+
+.hero-title {
+    font-size: 4rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    letter-spacing: -2px;
+}
+
+.hero-metadata {
+    color: var(--text-secondary);
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    display: flex;
+    gap: 0.75rem;
+}
+
+.hero-description {
+    color: #ddd;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn-play {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 0.75rem 2rem;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: background var(--transition-speed);
+}
+
+.btn-play:hover {
+    background-color: var(--accent-hover);
+}
+
+.btn-info {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: white;
+    padding: 0.75rem 2rem;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    backdrop-filter: blur(10px);
+    transition: background var(--transition-speed);
+}
+
+.btn-info:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+.hero-skeleton {
+    height: 80vh;
+    background: #111;
+    width: 100%;
+}

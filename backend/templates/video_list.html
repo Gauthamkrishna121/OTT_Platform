@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Videos</title>
+</head>
+<body>
+
+<h2>Available Videos</h2>
+
+{% for video in videos %}
+    <div style="margin-bottom:30px;">
+        <h3>{{ video.title }}</h3>
+        <p>{{ video.description }}</p>
+
+        <video width="640" controls>
+            <source src="{{ video.video_file.url }}" type="video/mp4">
+        </video>
+    </div>
+{% empty %}
+    <p>No videos uploaded yet</p>
+{% endfor %}
+
+<a href="/logout/">Logout</a>
+
+</body>
+</html>

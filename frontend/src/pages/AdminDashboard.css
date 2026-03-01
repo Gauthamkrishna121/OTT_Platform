@@ -1,0 +1,228 @@
+.admin-container {
+    display: flex;
+    min-height: 100vh;
+    background-color: var(--bg-color);
+}
+
+.admin-content {
+    flex: 1;
+    margin-left: var(--sidebar-width);
+    padding: 2rem 3rem;
+    width: calc(100% - var(--sidebar-width));
+}
+
+.admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 3rem;
+}
+
+.header-left h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 0.25rem;
+}
+
+.header-left p {
+    color: var(--text-secondary);
+}
+
+.header-right {
+    display: flex;
+    gap: 1rem;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background: var(--surface-color);
+    padding: 0 1rem;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    color: var(--text-secondary);
+}
+
+.search-bar input {
+    background: transparent;
+    border: none;
+    padding: 0.75rem 1rem;
+    color: white;
+    outline: none;
+    width: 250px;
+}
+
+.btn-add {
+    background: var(--accent-color);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 10px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all var(--transition-speed);
+}
+
+.btn-add:hover {
+    background: var(--accent-hover);
+    transform: translateY(-2px);
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.stat-card {
+    background: var(--surface-color);
+    padding: 1.5rem;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: transform var(--transition-speed);
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.stat-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.stat-info h3 {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+}
+
+.stat-value-row {
+    display: flex;
+    align-items: baseline;
+    gap: 0.75rem;
+}
+
+.stat-value {
+    font-size: 1.75rem;
+    font-weight: 800;
+}
+
+.stat-trend {
+    font-size: 0.85rem;
+    color: #10b981;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-weight: 600;
+}
+
+.content-management {
+    background: var(--surface-color);
+    border-radius: 24px;
+    padding: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.section-header h2 {
+    font-size: 1.25rem;
+}
+
+.btn-text {
+    color: var(--accent-color);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: transparent;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.admin-table th {
+    text-align: left;
+    padding: 1rem;
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    font-weight: 500;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.admin-table td {
+    padding: 1.25rem 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.table-content-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.table-content-info img {
+    width: 48px;
+    height: 32px;
+    border-radius: 6px;
+    object-fit: cover;
+}
+
+.admin-table span {
+    font-weight: 500;
+}
+
+.badge-active {
+    background: rgba(16, 185, 129, 0.1);
+    color: #10b981;
+    padding: 0.4rem 0.8rem;
+    border-radius: 30px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.btn-icon {
+    background: transparent;
+    color: var(--text-secondary);
+    transition: all var(--transition-speed);
+    padding: 0.5rem;
+    border-radius: 8px;
+}
+
+.btn-icon:hover {
+    color: white;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.btn-icon.delete:hover {
+    color: #ef4444;
+    background: rgba(239, 68, 68, 0.1);
+}

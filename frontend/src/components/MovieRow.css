@@ -1,0 +1,71 @@
+.movie-row {
+    padding: 1.5rem 5%;
+}
+
+.row-title {
+    color: var(--text-primary);
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.row-slider-wrapper {
+    position: relative;
+}
+
+.row-items {
+    display: flex;
+    gap: 0.75rem;
+    overflow-x: auto;
+    padding-bottom: 1rem;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+}
+
+.row-items::-webkit-scrollbar {
+    display: none;
+}
+
+.slider-arrow {
+    position: absolute;
+    top: 0;
+    bottom: 1rem;
+    width: 48px;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    color: white;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.row-slider-wrapper:hover .slider-arrow {
+    opacity: 1;
+}
+
+.slider-arrow:hover {
+    background: rgba(0, 0, 0, 0.85);
+}
+
+.slider-arrow-left {
+    left: 0;
+    border-radius: 0 8px 8px 0;
+}
+
+.slider-arrow-right {
+    right: 0;
+    border-radius: 8px 0 0 8px;
+}
+
+.movie-card-skeleton {
+    min-width: 160px;
+    height: 90px;
+    background: #1a1a1a;
+    border-radius: 12px;
+    flex-shrink: 0;
+}

@@ -1,0 +1,282 @@
+.admin-content-view {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.content-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content-header h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.content-header p {
+    color: #666;
+}
+
+.view-controls {
+    display: flex;
+    background: #1a1a1a;
+    padding: 0.4rem;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.view-btn {
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    background: transparent;
+    color: #666;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.view-btn.active {
+    background: #333;
+    color: white;
+}
+
+.filter-bar {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.search-box {
+    flex: 1;
+    background: #1a1a1a;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    padding: 0 1.25rem;
+    color: #666;
+    transition: border-color 0.3s;
+}
+
+.search-box:focus-within {
+    border-color: var(--accent-color);
+}
+
+.search-box input {
+    background: transparent;
+    border: none;
+    padding: 1rem;
+    color: white;
+    width: 100%;
+    outline: none;
+}
+
+.filter-options {
+    display: flex;
+    gap: 1rem;
+}
+
+.filter-select {
+    background: #1a1a1a;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    color: white;
+    padding: 0 1.5rem;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.btn-filter {
+    background: #1a1a1a;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    color: white;
+    padding: 0 1.5rem;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* Table Styles */
+.admin-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 0.75rem;
+}
+
+.admin-table th {
+    text-align: left;
+    padding: 0 1.5rem 1rem;
+    color: #666;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.admin-table td {
+    background: #1a1a1a;
+    padding: 1.5rem;
+}
+
+.admin-table td:first-child {
+    border-radius: 16px 0 0 16px;
+}
+
+.admin-table td:last-child {
+    border-radius: 0 16px 16px 0;
+}
+
+.title-preview {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.preview-box {
+    width: 48px;
+    height: 32px;
+    background: #222;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #444;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.preview-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.tag {
+    padding: 0.25rem 0.75rem;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.tag.movie {
+    background: rgba(59, 130, 246, 0.1);
+    color: #3b82f6;
+}
+
+.tag.series {
+    background: rgba(139, 92, 246, 0.1);
+    color: #8b5cf6;
+}
+
+.col-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.icon-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    background: #333;
+    color: white;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.icon-btn:hover {
+    background: #444;
+    transform: translateY(-2px);
+}
+
+.icon-btn.delete:hover {
+    background: #ef4444;
+}
+
+/* Grid Styles */
+.grid-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.admin-content-card {
+    background: #1a1a1a;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.card-thumb {
+    height: 160px;
+    background: #222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.card-details {
+    padding: 1.5rem;
+}
+
+.card-details h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.card-details p {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 1.25rem;
+}
+
+.card-actions {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.btn-icon {
+    flex: 1;
+    padding: 0.75rem;
+    background: #252525;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-icon:hover {
+    border-color: #555;
+}
+
+.btn-icon.delete:hover {
+    border-color: #ef4444;
+    color: #ef4444;
+}
